@@ -11,10 +11,26 @@
   </script>
   <script src="/socket.io/socket.io.js" defer></script>
   <script src="script.js" defer></script>
+  <link rel="stylesheet" href="style.css">
   <link rel="shortcut icon" href="#">
   <title>Document</title>
 </head>
 <body>
-  Hello world !!!
+  <div class="main">
+    <div class="main__videos">
+      <div id="video-wrap"></div>
+      <div class="video__contoroller">
+        <button type="buttoin" class="btn__action" onclick="playStop(this)">
+          <img src="images/video.png" alt="video" srcset="">
+        </button>
+        <button type="buttoin" class="btn__action" onclick="muteUnmute(this)">
+          <img src="images/mic.png" alt="video" srcset="">
+        </button>
+        <button type="buttoin" class="btn__action" onclick="leaveVideo(this)">
+          <img src="images/call.png" alt="video" srcset="">
+        </button>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
