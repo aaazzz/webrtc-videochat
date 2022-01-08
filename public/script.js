@@ -1,8 +1,9 @@
 const socket = io('/')
+const peer = new Peer()
 
-const userId = 12345
-
-socket.emit('join-room', ROOM_ID, userId)
+peer.on('open', userId => {
+  socket.emit('join-room', ROOM_ID, userId)
+})
 
 socket.on('user-connected', userId => {
   console.log('userId=', userId)
